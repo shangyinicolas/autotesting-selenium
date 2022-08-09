@@ -1,16 +1,16 @@
 package com.planittesting.model.pages;
-import org.openqa.selenium.By;
+
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class HomePage {
-    protected WebDriver driver;
+public class HomePage extends BasePage<HomePage>{
+
 
     public HomePage(WebDriver driver){
-        this.driver=driver;
+        super(driver);
     }
-    public ContactPage clickContactMenu(){
-        driver.findElement(By.cssSelector("#nav-contact a")).click();
-        return new ContactPage(driver);
-    }
+
 }
